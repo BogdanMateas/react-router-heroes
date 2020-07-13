@@ -1,0 +1,48 @@
+// variables
+
+$base-color: #F7F8FC;
+$second-color: #FFFFFF;
+
+// mixins 
+
+@mixin space-between-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // align-items: center;
+}
+
+
+@mixin space-between-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin button {
+    border: none;
+    padding: 2%;
+    border-radius: 5px;
+    @include space-between-row;
+}
+
+
+.side-bar {
+    @include space-between-column;
+    padding: 4%;
+    background-color: $second-color;
+}
+
+.btn {
+    @include button
+}
+
+.login-box {
+    display: flex;
+    background-color: $base-color;
+}
+
+img {
+    width: 100px;
+}
